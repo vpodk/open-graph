@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" itemscope
       itemtype="http://schema.org/WebPage" lang="en">
 <head>
-<meta itemprop="dateModified" content="2020-08-28T16:16:00">
+<meta itemprop="dateModified" content="2020-08-28T16:26:00">
 <meta itemprop="datePublished" content="2020-08-28T13:23:00">
 <meta charset="utf-8">
 <title>Open Graph - YouTube Video</title>
@@ -48,12 +48,25 @@
             frameborder="0" allowfullscreen></iframe>
   </div>
   <script>
-  const link = document.body.appendChild(document.createElement('a'));
+  let url = encodeURIComponent(location.href + '?nocache=' + Date.now());
+  let link = document.body.appendChild(document.createElement('a'));
   link.href = 'https://twitter.com/intent/tweet' +
-               '?text=' + encodeURIComponent(document.title) +
-               '&url=' + encodeURIComponent(location.href) +
-               '&hashtags=og,open-graph';
+              '?text=' + encodeURIComponent(document.title) +
+              '&url=' + url +
+              '&hashtags=og,opengraph';
   link.textContent = 'Tweet';
+
+  link = document.body.appendChild(document.createElement('a'));
+  link.href = 'https://cards-dev.twitter.com/validator?url=' + url;
+  link.textContent = 'Tweet Card Validator';
+
+  link = document.body.appendChild(document.createElement('a'));
+  link.href = 'https://developers.facebook.com/tools/debug/?q=' + url;
+  link.textContent = 'Facebook Debugger';
+
+  link = document.body.appendChild(document.createElement('a'));
+  link.href = 'https://www.linkedin.com/post-inspector/inspect/' + url;
+  link.textContent = 'LinkedIn Post Inspector';
   </script>
 </body>
 </html>
