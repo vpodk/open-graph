@@ -72,6 +72,15 @@
   link.textContent = 'Share on Facebook';
 
   link = document.body.appendChild(document.createElement('a'));
+  link.href = 'https://www.linkedin.com/shareArticle' +
+              '?mini=true' +
+              '&title=' + encodeURIComponent(document.title) +
+              '&url=' + url +
+              '&summary=' + encodeURIComponent('URL friendly text') +
+              '&source=WebSite';
+  link.textContent = 'Share on LinkedIn';
+
+  link = document.body.appendChild(document.createElement('a'));
   link.href = 'https://cards-dev.twitter.com/validator?url=' + url;
   link.textContent = 'Tweet Card Validator';
 
