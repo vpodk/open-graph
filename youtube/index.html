@@ -49,7 +49,7 @@
             frameborder="0" allowfullscreen></iframe>
   </div>
   <script>
-  let url = encodeURIComponent(location.href + '?nocache=' + Date.now());
+  let url = encodeURIComponent(location.href);
   let link = document.body.appendChild(document.createElement('a'));
   link.href = 'https://twitter.com/intent/tweet' +
               '?text=' + encodeURIComponent(document.title) +
