@@ -53,26 +53,6 @@
       <source src="https://vpodk.com/open-graph/html5/video.mp4" type="video/mp4">
     </video>
   </div>
-  <script>
-  let url = encodeURIComponent(location.href);
-  let link = document.body.appendChild(document.createElement('a'));
-  link.href = 'https://twitter.com/intent/tweet' +
-              '?text=' + encodeURIComponent(document.title) +
-              '&url=' + url +
-              '&hashtags=og,opengraph';
-  link.textContent = 'Tweet';
-
-  link = document.body.appendChild(document.createElement('a'));
-  link.href = 'https://cards-dev.twitter.com/validator?url=' + url;
-  link.textContent = 'Tweet Card Validator';
-
-  link = document.body.appendChild(document.createElement('a'));
-  link.href = 'https://developers.facebook.com/tools/debug/?q=' + url;
-  link.textContent = 'Facebook Debugger';
-
-  link = document.body.appendChild(document.createElement('a'));
-  link.href = 'https://www.linkedin.com/post-inspector/inspect/' + url;
-  link.textContent = 'LinkedIn Post Inspector';
-  </script>
+  <script src="../common.js"></script>
 </body>
 </html>

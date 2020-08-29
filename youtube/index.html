@@ -23,6 +23,8 @@
 <meta property="og:image" content="https://img.youtube.com/vi/b8kX62h-pM4/0.jpg">
 <meta property="og:video:url" content="https://www.youtube.com/v/b8kX62h-pM4">
 <meta property="og:video:secure_url" content="https://www.youtube.com/v/b8kX62h-pM4">
+<meta property="og:video:width" content="1280">
+<meta property="og:video:height" content="720">
 <meta property="og:video:type" content="text/html">
 <meta property="og:type" content="website">
 
@@ -52,26 +54,6 @@
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             frameborder="0" allowfullscreen></iframe>
   </div>
-  <script>
-  let url = encodeURIComponent(location.href);
-  let link = document.body.appendChild(document.createElement('a'));
-  link.href = 'https://twitter.com/intent/tweet' +
-              '?text=' + encodeURIComponent(document.title) +
-              '&url=' + url +
-              '&hashtags=og,opengraph';
-  link.textContent = 'Tweet';
-
-  link = document.body.appendChild(document.createElement('a'));
-  link.href = 'https://cards-dev.twitter.com/validator?url=' + url;
-  link.textContent = 'Tweet Card Validator';
-
-  link = document.body.appendChild(document.createElement('a'));
-  link.href = 'https://developers.facebook.com/tools/debug/?q=' + url;
-  link.textContent = 'Facebook Debugger';
-
-  link = document.body.appendChild(document.createElement('a'));
-  link.href = 'https://www.linkedin.com/post-inspector/inspect/' + url;
-  link.textContent = 'LinkedIn Post Inspector';
-  </script>
+  <script src="../common.js"></script>
 </body>
 </html>
