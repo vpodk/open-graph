@@ -67,7 +67,7 @@
               '?display=popup&app_id=490025408049997' +
               '&href=' + url +
               '&redirect_uri=' + url +
-              '&hashtag=#opengraph';
+              '&hashtag=' + encodeURIComponent('#opengraph');
   link.textContent = 'Share on Facebook';
 
   link = document.body.appendChild(document.createElement('a'));
