@@ -27,6 +27,8 @@
               '&source=WebSite';
   link.textContent = 'Share on LinkedIn';
 
+  document.body.appendChild(document.createElement('br'));
+
   link = document.body.appendChild(document.createElement('a'));
   link.href = 'https://cards-dev.twitter.com/validator?url=' + url;
   link.textContent = 'Tweet Card Validator';
