@@ -64,9 +64,10 @@
 
   link = document.body.appendChild(document.createElement('a'));
   link.href = 'https://www.facebook.com/dialog/share' +
-              '?display=popup&app_id=145634995501895' +
+              '?display=popup&app_id=490025408049997' +
               '&href=' + url +
-              '&hashtag=#og,#opengraph';
+              '&redirect_uri=' + url +
+              '&hashtag=#opengraph';
   link.textContent = 'Share on Facebook';
 
   link = document.body.appendChild(document.createElement('a'));
