@@ -1,8 +1,10 @@
 (function() {
-  let url = encodeURIComponent(location.href);
+  const url = encodeURIComponent(location.href);
+  const title = encodeURIComponent(document.title);
+
   let link = document.body.appendChild(document.createElement('a'));
   link.href = 'https://twitter.com/intent/tweet' +
-              '?text=' + encodeURIComponent(document.title) +
+              '?text=' + title +
               '&url=' + url +
               '&hashtags=og,opengraph';
   link.textContent = 'Tweet';
@@ -10,7 +12,7 @@
   link = document.body.appendChild(document.createElement('a'));
   link.href = 'https://www.facebook.com/dialog/share' +
               '?display=popup&app_id=490025408049997' +
-              '&quote=' + encodeURIComponent(document.title) +
+              '&quote=' + title +
               '&href=' + url +
               // '&redirect_uri=' + url +
               '&hashtag=' + encodeURIComponent('#opengraph');
@@ -19,7 +21,7 @@
   link = document.body.appendChild(document.createElement('a'));
   link.href = 'https://www.linkedin.com/shareArticle' +
               '?mini=true' +
-              '&title=' + encodeURIComponent(document.title) +
+              '&title=' + title +
               '&url=' + url +
               '&summary=' + encodeURIComponent('URL friendly text') +
               '&source=WebSite';
