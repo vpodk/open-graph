@@ -7,7 +7,7 @@
               '?text=' + title +
               '&url=' + url +
               '&hashtags=og,opengraph';
-  link.textContent = 'Tweet';
+  link.textContent = 'Share on Twitter';
 
   link = document.body.appendChild(document.createElement('a'));
   link.href = 'https://www.facebook.com/dialog/share' +
